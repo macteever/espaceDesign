@@ -62,6 +62,8 @@ if (function_exists('add_theme_support'))
 	Functions
 \*------------------------------------*/
 
+ // Increase size file
+
 // WOO COMMERCE FUNCTIONS
 /**
  * WooCommerce Extra Feature

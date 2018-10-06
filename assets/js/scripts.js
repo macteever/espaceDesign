@@ -145,7 +145,7 @@
       }).resize();
 		// END RESIZE
 
-		// SLIDER HOME
+		// ***** SLIDER HOME ***** //
 
 		// SLIDER VIDEO
         var slideWrapper = $(".main-slider"),
@@ -293,14 +293,14 @@
             //start the slider
             slideWrapper.slick({
                 fade: true,
-                autoplaySpeed: 4000,
+                autoplaySpeed: 8000,
                 autoplay: true,
                 pauseOnDotsHover: false,
                 pauseOnHover: false,
                 pauseOnFocus: false,
                 lazyLoad: "progressive",
                 speed: 600,
-                arrows: true,
+                arrows: false,
                 dots: true,
                 cssEase: "cubic-bezier(0.87, 0.03, 0.41, 0.9)"
             });

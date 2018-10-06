@@ -145,7 +145,11 @@
       }).resize();
 		// END RESIZE
 
-		// ***** SLIDER HOME ***** //
+		/** HOME PAGE **/
+
+		
+
+		// * SLIDER HOME * //
 
 		// SLIDER VIDEO
         var slideWrapper = $(".main-slider"),

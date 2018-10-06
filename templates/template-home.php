@@ -53,26 +53,54 @@
 		</section>
 		<section>
 			<div class="container">
-				<div class="row">
+				<div class="row flex-column pt-80 pb-80 justify-content-center align-items-center text-center intro-category p-relative">
+				<?php
+				if( have_rows('intro_category') ):
+					 while ( have_rows('intro_category') ) : the_row();
+					 ?>
+					 <div class="col-xl-6 col-lg-6 col-md-12 col-12">
+						 <h3 class="fs-36 uppercase"><?php the_sub_field('titre'); ?></h3>
+						 <div class="fs-18 sourcepro text-center mt-30">
+							 <?php the_sub_field('content'); ?>
+						 </div>
+					 </div>
+					 <?php
+ 				    endwhile;
+ 				else :
+ 				endif;
+ 				?>
+				</div>
+				<div class="row anim-300">
 				<?php
 				if( have_rows('home_category') ):
 				    while ( have_rows('home_category') ) : the_row();
 					 ?>
-						 <div class="col-xl-4 col-lg-4 col-md-6 col-12 p-relative col-category mb-30">
+						 <div class="anim-500 col-xl-4 col-lg-4 col-md-6 col-12 p-relative col-category mb-30">
+							 <?php
+
+							 $terms = get_sub_field('lien');
+							 if( $terms ): ?>
+
+							 <?php foreach( $terms as $term ): ?>
+							 <a class="d-block" href="<?php echo get_term_link( $term ); ?>">
+							 <?php endforeach; ?>
+					   	 <?php endif; ?>
 							 <?php
 								$image = get_sub_field('img');
 								if( !empty($image) ): ?>
 									<img class="" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" title="<?php echo $image['title']; ?>"/>
 								<?php endif;
 								?>
-								<div class="">
-									<h2 class="fw-600 fs-36"><?php the_sub_field('nom_cat'); ?></h2>
-									<div class="fs-15">
-										<?php the_sub_field('description'); ?>
+								<div class="p-absolute col-category-content">
+									<h2 class="fs-36 fw-500 text-white mb-10"><?php the_sub_field('nom_cat'); ?></h2>
+									<div class="o-hidden anim-500">
+										<div class="anim-500 fs-15 mb-20	home-cat-excerpt text-white">
+											<?php the_sub_field('description'); ?>
+										</div>
 									</div>
-									<a href="<?php the_sub_field('lien'); ?>">Voir nos créatinos</a>
-
+									<a class="orange-brd-btn-shadow sourcepro" href="<?php the_sub_field('lien'); ?>">Voir nos créations</a>
 								</div>
+						 	 </a>
 						 </div>
 
 					<?php
@@ -80,6 +108,21 @@
 				else :
 				endif;
 				?>
+				</div>
+				<div class="row">
+					<?php
+
+					$terms = get_field('lien');
+					if( $terms ): ?>
+
+						<?php foreach( $terms as $term ): ?>
+
+							<a href="<?php echo get_term_link( $term ); ?>"></a>
+
+						<?php endforeach; ?>
+					<?php endif; ?>
+
+
 				</div>
 			</div>
 		</section>

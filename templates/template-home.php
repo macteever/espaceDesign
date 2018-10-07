@@ -54,37 +54,33 @@
 		<section>
 			<div class="container">
 				<div class="row flex-column pt-80 pb-80 justify-content-center align-items-center text-center intro-category p-relative">
-				<?php
-				if( have_rows('intro_category') ):
-					 while ( have_rows('intro_category') ) : the_row();
-					 ?>
-					 <div class="col-xl-6 col-lg-6 col-md-12 col-12">
-						 <h3 class="fs-36 uppercase"><?php the_sub_field('titre'); ?></h3>
-						 <div class="fs-18 sourcepro text-center mt-30">
-							 <?php the_sub_field('content'); ?>
+					<?php
+					if( have_rows('intro_category') ):
+						 while ( have_rows('intro_category') ) : the_row();
+						 ?>
+						 <div class="col-xl-6 col-lg-6 col-md-12 col-12">
+							 <h3 class="fs-36 uppercase"><?php the_sub_field('titre'); ?></h3>
+							 <div class="fs-18 sourcepro text-center mt-30">
+								 <?php the_sub_field('content'); ?>
+							 </div>
 						 </div>
-					 </div>
-					 <?php
- 				    endwhile;
- 				else :
- 				endif;
- 				?>
+						 <?php
+	 				    endwhile;
+	 				else :
+	 				endif;
+	 				?>
 				</div>
 				<div class="row anim-300">
-				<?php
-				if( have_rows('home_category') ):
-				    while ( have_rows('home_category') ) : the_row();
-					 ?>
+					<?php
+					if( have_rows('home_category') ):
+					    while ( have_rows('home_category') ) : the_row();
+						 ?>
 						 <div class="anim-500 col-xl-4 col-lg-4 col-md-6 col-12 p-relative col-category mb-30">
 							 <?php
-
 							 $terms = get_sub_field('lien');
 							 if( $terms ): ?>
-
 							 <?php foreach( $terms as $term ): ?>
 							 <a class="d-block" href="<?php echo get_term_link( $term ); ?>">
-							 <?php endforeach; ?>
-					   	 <?php endif; ?>
 							 <?php
 								$image = get_sub_field('img');
 								if( !empty($image) ): ?>
@@ -98,80 +94,81 @@
 											<?php the_sub_field('description'); ?>
 										</div>
 									</div>
-									<a class="orange-brd-btn-shadow sourcepro" href="<?php the_sub_field('lien'); ?>">Voir nos créations</a>
+									<a class="orange-brd-btn-shadow sourcepro" href="<?php echo get_term_link( $term ); ?>">Voir nos créations</a>
 								</div>
 						 	 </a>
+							 <?php endforeach; ?>
+						 <?php endif; ?>
 						 </div>
-
-					<?php
-				    endwhile;
-				else :
-				endif;
-				?>
+						<?php
+					    endwhile;
+					else :
+					endif;
+					?>
 				</div>
-				<div class="row">
+				<div class="row mt-100 mb-100 align-items-center">
 					<?php
-
-					$terms = get_field('lien');
-					if( $terms ): ?>
-
-						<?php foreach( $terms as $term ): ?>
-
-							<a href="<?php echo get_term_link( $term ); ?>"></a>
-
-						<?php endforeach; ?>
-					<?php endif; ?>
-
-
+					if( have_rows('home_partner') ):
+					    while ( have_rows('home_partner') ) : the_row();
+						 ?>
+						 <div class="col-xl-6 col-lg-6 col-md-12 col-12 home-partner-img">
+						 <?php
+							$img = get_sub_field('image');
+							if( !empty($img) ): ?>
+								<img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>" title="<?php echo $img['title']; ?>"/>
+							<?php endif;
+							?>
+						 </div>
+						 <div class="col-xl-5 col-lg-5 col-md-12 col-12">
+							 <div class="mb-30"><?php the_sub_field('titre'); ?></div>
+							 <div class="mb-30 fs-18"><?php the_sub_field('texte'); ?></div>
+							 <div ><a class="orange-btn" href="<?php the_sub_field('lien'); ?>">En savoir plus</a></div>
+						 </div>
+						 <?php
+	 				    endwhile;
+	 				else :
+	 				endif;
+	 				?>
 				</div>
 			</div>
 		</section>
 	</div>
-
-	<div class="container-fluid home-news">
-		<!-- <div class="home-news-child">
-			<div class="container">
-				<div class="row mb-80 home-posts">
-					<h2 class="fs-48 mt-50 mb-50">Nos dernières actualités</h2>
-					<div class="col-12 home-posts-child">
-							<?php $args = array(
-								'posts_per_page'   => 3,
-								'offset'           => 0,
-								'category'         => '',
-								'category_name'    => '',
-								'orderby'          => 'date',
-								'order'            => 'DESC',
-								'include'          => '', 	'exclude'          => '',
-								'meta_key'         => '',
-								'meta_value'       => '',
-								'post_type'        => 'post', 	'post_mime_type'   => '',
-								'post_parent'      => '',
-								'author'	   	   => '',
-								'post_status'      => 'publish',
-								'suppress_filters' => true
-							);
-
-							$myposts = get_posts( $args );
-
-							foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-
-							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-								<div class="col-xl-6 col-lg-6 col-md-6 col-12 float-left home-post" style="height: 300px;
-								background: -webkit-linear-gradient(rgba(238,238,238,0.00) 15%, #2D2D2D 100%);
-								background: -o-linear-gradient(rgba(238,238,238,0.00) 15%, #2D2D2D 100%);
-								background: linear-gradient(rgba(238,238,238,0.00) 15%, #2D2D2D 100%),
-								url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>'); background-size: cover;">
-								<h3 class="fw-300 roboto text-white fs-32"><?php the_title(); ;?></h3>
-							</a>
-							<?php
-							endforeach;
-							wp_reset_postdata();
-							?>
-						</div>
-					</div>
-					</div>
+	<div class="container-fluid home-news" style="
+		background: -webkit-linear-gradient(rgba(0,0,0,0.72) 15%, rgba(0,0,0,0.72) 100%);
+		background: -o-linear-gradient(rgba(0,0,0,0.72) 15%, rgba(0,0,0,0.72) 100%);
+		background: linear-gradient(rgba(0,0,0,0.72) 15%, rgba(0,0,0,0.72) 100%),
+		url('<?php the_field('home_blog_bkg') ?>'); background-size: cover; background-position: center;">
+		<div class="container">
+			<div class="row home-posts home-blog-slider">
+				<div class="col-12 home-posts-child">
+						<?php $args = array(
+							'posts_per_page'   => 3,
+							'offset'           => 0,
+							'category'         => '',
+							'category_name'    => '',
+							'orderby'          => 'date',
+							'order'            => 'DESC',
+							'include'          => '', 	'exclude'          => '',
+							'meta_key'         => '',
+							'meta_value'       => '',
+							'post_type'        => 'post', 	'post_mime_type'   => '',
+							'post_parent'      => '',
+							'author'	   	   => '',
+							'post_status'      => 'publish',
+							'suppress_filters' => true
+						);
+						$myposts = get_posts( $args );
+						foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+							<h3 class="fw-300 text-white fs-32"><?php the_title(); ;?></h3>
+						</a>
+						<?php
+						endforeach;
+						wp_reset_postdata();
+						?>
 				</div>
-		</div> -->
+			</div>
+		</div>
 	</div>
 </main>
 <!-- /container-fluid -->

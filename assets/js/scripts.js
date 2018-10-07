@@ -147,8 +147,6 @@
 
 		/** HOME PAGE **/
 
-		
-
 		// * SLIDER HOME * //
 
 		// SLIDER VIDEO
@@ -319,21 +317,13 @@
 
 		// SLIDER BLOG HOME PAGE
 
-			$('.blog-slider').slick({
-
+			$('.home-blog-slider').slick({
 			  infinite: true,
-        autoplay: false,
+        	  autoplay: false,
 			  slidesToShow: 1,
 			  slidesToScroll: 1,
-        arrows: false
+        	  arrows: false
 			});
-
-      $('.blog-prev').click(function(){
-      $('.blog-slider').slick('slickPrev');
-    });
-      $('.blog-next').click(function(){
-      $('.blog-slider').slick('slickNext');
-    });
 
       // SLIDER PAGE BLOG
 

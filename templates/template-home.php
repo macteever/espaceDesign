@@ -1,7 +1,7 @@
 <?php /* Template Name: Home */ get_header(); ?>
 <main role="main" class="main-content">
 	<div class="container-fluid pl-0 pr-0">
-		<section class="main-slider" id="port">
+		<section class="main-slider" id="home">
 			<?php
 			// check if the flexible content field has rows of data
 			if( have_rows('slider_home') ):
@@ -72,9 +72,11 @@
 				</div>
 				<div class="row anim-300">
 					<?php
+					$compt = 0;
 					if( have_rows('home_category') ):
 					    while ( have_rows('home_category') ) : the_row();
 						 ?>
+						 <?php if (($compt < 3)) { ?>
 						 <div class="anim-500 col-xl-4 col-lg-4 col-md-6 col-12 p-relative col-category mb-30">
 							 <?php
 							 $terms = get_sub_field('lien');
@@ -100,7 +102,35 @@
 							 <?php endforeach; ?>
 						 <?php endif; ?>
 						 </div>
-						<?php
+						 <?php } elseif (($compt > 2 && $compt < 5)) { ?>
+							 <div class="anim-500 col-xl-6 col-lg-6 col-md-6 col-12 p-relative col-category mb-30">
+								 <?php
+								 $terms = get_sub_field('lien');
+								 if( $terms ): ?>
+								 <?php foreach( $terms as $term ): ?>
+								 <a class="d-block" href="<?php echo get_term_link( $term ); ?>">
+								 <?php
+									$image = get_sub_field('img');
+									if( !empty($image) ): ?>
+										<img class="" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" title="<?php echo $image['title']; ?>"/>
+									<?php endif;
+									?>
+									<div class="p-absolute col-category-content">
+										<h2 class="fs-36 fw-500 text-white mb-10"><?php the_sub_field('nom_cat'); ?></h2>
+										<div class="o-hidden anim-500">
+											<div class="anim-500 fs-15 mb-20	home-cat-excerpt text-white">
+												<?php the_sub_field('description'); ?>
+											</div>
+										</div>
+										<a class="orange-brd-btn-shadow sourcepro" href="<?php echo get_term_link( $term ); ?>">Voir nos créations</a>
+									</div>
+							 	 </a>
+								 <?php endforeach; ?>
+							 <?php endif; ?>
+							 </div>
+						 <?php } ?>
+						 <?php $compt++; ?>
+						 <?php
 					    endwhile;
 					else :
 					endif;
@@ -138,38 +168,49 @@
 		background: -o-linear-gradient(rgba(0,0,0,0.72) 15%, rgba(0,0,0,0.72) 100%);
 		background: linear-gradient(rgba(0,0,0,0.72) 15%, rgba(0,0,0,0.72) 100%),
 		url('<?php the_field('home_blog_bkg') ?>'); background-size: cover; background-position: center;">
-		<div class="container">
-			<div class="row home-posts home-blog-slider">
-				<div class="col-12 home-posts-child">
-						<?php $args = array(
-							'posts_per_page'   => 3,
-							'offset'           => 0,
-							'category'         => '',
-							'category_name'    => '',
-							'orderby'          => 'date',
-							'order'            => 'DESC',
-							'include'          => '', 	'exclude'          => '',
-							'meta_key'         => '',
-							'meta_value'       => '',
-							'post_type'        => 'post', 	'post_mime_type'   => '',
-							'post_parent'      => '',
-							'author'	   	   => '',
-							'post_status'      => 'publish',
-							'suppress_filters' => true
-						);
-						$myposts = get_posts( $args );
-						foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+		<div class="container pt-80 pb-80">
+			<div class="row mb-50">
+				<h3 class="text-white fs-36 ls-1 uppercase mx-auto">Les dernières <span class="text-orange">actualités</span></h3>
+			</div>
+			<div class="col-xl-10 col-lg-10 col-md-12 col-12 mx-auto">
+				<div class="home-blog-slider border-x">
+					<?php $args = array(
+						'posts_per_page'   => 3,
+						'offset'           => 0,
+						'category'         => '',
+						'category_name'    => '',
+						'orderby'          => 'date',
+						'order'            => 'DESC',
+						'include'          => '', 	'exclude'          => '',
+						'meta_key'         => '',
+						'meta_value'       => '',
+						'post_type'        => 'post', 	'post_mime_type'   => '',
+						'post_parent'      => '',
+						'author'	   	   => '',
+						'post_status'      => 'publish',
+						'suppress_filters' => true
+					);
+					$myposts = get_posts( $args );
+					foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+					<div class="col-xl-6 col-lg-6 col-md-12 col-12">
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-							<h3 class="fw-300 text-white fs-32"><?php the_title(); ;?></h3>
+							<h3 class="fw-300 text-white fs-28"><?php the_title(); ;?></h3>
+							<p class="sourcepro fs-18 text-white mt-30 mb-30">
+								<?php the_excerpt(); ?>
+							</p>
+							<div class="p-10">
+								<a class="orange-btn" href="<?php the_permalink(); ?>">Lire l'actu</a>
+							</div>
 						</a>
-						<?php
-						endforeach;
-						wp_reset_postdata();
-						?>
+					</div>
+					<?php
+				endforeach;
+				wp_reset_postdata();
+				?>
 				</div>
 			</div>
 		</div>
 	</div>
+	<!-- /container-fluid -->
 </main>
-<!-- /container-fluid -->
 <?php get_footer(); ?>

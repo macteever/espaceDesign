@@ -322,7 +322,7 @@
         	  autoplay: false,
 			  slidesToShow: 1,
 			  slidesToScroll: 1,
-        	  arrows: false
+        	  arrows: true
 			});
 
       // SLIDER PAGE BLOG

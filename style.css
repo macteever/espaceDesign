@@ -155,7 +155,7 @@ strong{
 
 .o-hidden{overflow: hidden;}
 
-.text-white{color: #FFF;}
+.text-white{color: #FFF!important;}
 .text-orange{color: #C75527;}
 .text-black{color: #444;}
 .text-grey{color: #575756;}
@@ -465,7 +465,7 @@ main{
 .page-template-template-home ul li a, .page-template-template-home ul li .fa{
 	color: #FFF;
 }
-.page-template-template-home .resize-menu ul li a, .page-template-template-home .resize-menu ul li .fa{
+ .resize-menu ul li a, .resize-menu ul li .fa{
 	color: #FFF;
 }
 
@@ -556,7 +556,7 @@ main{
 	top: 0px;
 }
 .page-template-template-home .main-slider .slick-track{
-	height: calc(100vh - 20px);
+	height: calc(100vh - 15px);
 }
 .slider-title-content h1{
 	font-size: 62px;
@@ -608,7 +608,14 @@ main{
 }
 /* HOME NEWS */
 .home-blog-slider{
+	margin-left: 20px;
+  margin-right: 20px;
+}
+.home-blog-slider .slick-list{
 	padding: 40px;
+}
+.home-blog-slider .slick-slide{
+	margin-right: 30px;
 }
 .border-x{
 	border-left: solid 1px #979797;
@@ -710,6 +717,17 @@ main{
 	display: none;
 }
 /** PAGE ARCHIVE PRODUCT **/
+.post-type-archive-product .archive-product-container ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+.woocommerce ul.products li.product a img{
+	width: 100%;
+	height: 350px!important;
+	object-fit: cover;
+	object-position: center;
+}
+
 .woocommerce-message {
 		border-top: solid 1px;
     border-top-color: #3D3D3D;
@@ -719,10 +737,6 @@ main{
 	background-color: #3D3D3D;
 	color: #FFF;
 	font-weight: 400;
-}
-
-.post-type-archive-product{
-	background-color: #F4F3F3;
 }
 .post-type-archive-product .woocommerce-result-count{
 	display: none;
@@ -735,19 +749,11 @@ main{
 	height: 45px;
 	border: none;
 }
-.post-type-archive-product h1:after{
-	content: '';
-	display: block;
-	height: 2px;
-	width: 100%;
-	background-color: #9B1F52;
-	margin-top: 20px;
-}
 .post-type-archive-product .products{
 	margin-top: 30px!important;
 }
 .post-type-archive-product.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
-	width: auto!important;
+	width: 100%;
 	margin: 0px;
 	background-color: #FFF;
 }
@@ -762,8 +768,7 @@ main{
 }
 .post-type-archive-product span.woocommerce-Price-amount.amount, .tax-product_cat span.woocommerce-Price-amount.amount{
 	font-size: 18px;
-	margin-left: 5%;
-	color: #9B1F52;
+	color: #4A4A4A;
 }
 .post-type-archive-product .product .button, .tax-product_cat .product .button{
 	color: white;
@@ -809,19 +814,8 @@ main{
 	font-size: 16px;
 }
 
-/** ARCHIVE CATEGORY **/
-.archive.tax-product_cat {
-	background-color: #F4F3F3;
-}
+/** ARCHIVE CATEGORY PRODUCT **/
 
-.tax-product_cat h1:after {
-    content: '';
-    display: block;
-    height: 2px;
-    width: 100%;
-    background-color: #9B1F52;
-    margin-top: 20px;
-}
 .tax-product_cat .woocommerce-result-count{
 	display: none;
 }

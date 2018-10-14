@@ -116,6 +116,10 @@ function woocommerce_support() {
 }
 
 // CUSTOM functions
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}
+
 function my_setup() {
     /*  Ajout d'un logo dans l'onglet personnaliser */
     add_theme_support( 'custom-logo', array(

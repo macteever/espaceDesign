@@ -854,6 +854,22 @@ main{
 	color: #FFF;
 	font-weight: 400;
 }
+/* pagination archive product */
+.woocommerce-pagination{
+		margin-bottom: 80px;
+}
+.woocommerce nav.woocommerce-pagination ul, .woocommerce nav.woocommerce-pagination ul li{
+	border: none;
+}
+.woocommerce nav.woocommerce-pagination ul li span.current{
+	background-color: transparent;
+	font-weight: 600;
+	font-size: 1.05em;
+	color: #444;
+}
+.woocommerce-pagination ul li a{
+	color: #444;
+}
 .post-type-archive-product .woocommerce-result-count{
 	display: none;
 }

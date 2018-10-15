@@ -73,18 +73,30 @@ if (function_exists('add_theme_support'))
  * Set your own value for 'posts_per_page'
  *
  */
-function woo_related_products_limit() {
-  global $product;
+ /**
+  * Change number of products that are displayed per page (shop page)
+  */
+ add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
 
-    $args['posts_per_page'] = 6;
-    return $args;
-}
-add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args' );
-  function jk_related_products_args( $args ) {
-    $args['posts_per_page'] = 3; // 4 related products
-    $args['columns'] = 2; // arranged in 2 columns
-    return $args;
-}
+ function new_loop_shop_per_page( $cols ) {
+   // $cols contains the current number of products per page based on the value stored on Options -> Reading
+   // Return the number of products you wanna show per page.
+   $cols = 9;
+   return $cols;
+ }
+
+// function woo_related_products_limit() {
+//   global $product;
+//
+//     $args['posts_per_page'] = 6;
+//     return $args;
+// }
+// add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args' );
+//   function jk_related_products_args( $args ) {
+//     $args['posts_per_page'] = 3; // 4 related products
+//     $args['columns'] = 2; // arranged in 2 columns
+//     return $args;
+// }
 
 add_filter( 'woocommerce_product_add_to_cart_text', 'woo_archive_custom_cart_button_text' );    // 2.1 +
 

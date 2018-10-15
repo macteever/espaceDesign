@@ -20,4 +20,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-the_title( '<h1 class="product_title entry-title">', '</h1>' );
+global $product;
+?>
+<div class="product_meta fs-16">
+	<?php do_action( 'woocommerce_product_meta_start' ); ?>
+	<?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>
+
+		<span class="sku_wrapper"><?php esc_html_e( 'SKU:', 'woocommerce' ); ?> <span class="sku"><?php echo ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'woocommerce' ); ?></span></span>
+
+	<?php endif; ?>
+
+	<?php echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted_in text-orange">' . _n( 'Category:', 'Categories:', count( $product->get_category_ids() ), 'woocommerce' ) . ' ', '</span>' ); ?>
+
+	<?php echo wc_get_product_tag_list( $product->get_id(), ', ', '<span class="tagged_as">' . _n( 'Tag:', 'Tags:', count( $product->get_tag_ids() ), 'woocommerce' ) . ' ', '</span>' ); ?>
+
+	<?php do_action( 'woocommerce_product_meta_end' ); ?>
+
+</div>
+
+<?php the_title( '<h1 class="fs-60 fw-600 ls-2 mb-20 uppercase product_title entry-title">', '</h1>' );

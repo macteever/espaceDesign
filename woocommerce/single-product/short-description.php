@@ -29,6 +29,28 @@ if ( ! $short_description ) {
 }
 
 ?>
-<div class="woocommerce-product-details__short-description">
-	<?php echo $short_description; // WPCS: XSS ok. ?>
+<div class="woocommerce-product-details__short-description mb-50">
+	<h3 class="poppins fs-18 fw-600 mb-10 d-flex justify-content-between">Description<i class="fa fs-15 fa-chevron-down"></i></h3>
+	<div class="single-infos">
+		<?php echo $short_description; // WPCS: XSS ok. ?>
+	</div>
 </div>
+<?php
+if( have_rows('specifications') ):
+ while( have_rows('specifications') ) : the_row();
+ ?>
+	<div class="single-specifications mb-50">
+		<h3 class="poppins fs-18 fw-600 mb-10 d-flex justify-content-between">Spécifications<i class="fa fs-15 fa-chevron-down"></i></h3>
+		<div class="single-infos">
+			<div class="fs-17 mb-15">Hauteur : <?php the_sub_field('hauteur'); ?> cm</div>
+			<div class="fs-17 mb-15">Largeur : <?php the_sub_field('largeur'); ?> cm</div>
+			<div class="fs-17 mb-15">Profondeur : <?php the_sub_field('profondeur'); ?> cm</div>
+			<div class="fs-17 mb-15">Couleur : <?php the_sub_field('couleur'); ?></div>
+			<div class="fs-17 mb-15">Matière : <?php the_sub_field('matiere'); ?></div>
+		</div>
+	</div>
+ <?php
+ endwhile;
+ else :
+endif;
+?>

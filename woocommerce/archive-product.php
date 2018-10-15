@@ -18,7 +18,6 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header(); ?>
-
 	<div class="container-fluid pl-0 pr-0">
 		<?php
 		/**

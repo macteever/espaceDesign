@@ -43,14 +43,17 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 			*/
 				do_action( 'woocommerce_before_shop_loop_item_title' );
 
-				//	echo $product->get_categories( ', ', '<span class="posted_in cat-page-archive">' . _n( 'Category:', $cat_count, 'woocommerce' ) . ' ', '</span>' );
+				echo $product->get_categories( ', ', '<span class="posted_in cat-page-archive ml-0">' . _n( 'Category:', $cat_count, 'woocommerce' ) . ' ', '</span>' );
 				/**
 				* Hook: woocommerce_shop_loop_item_title.
 				*
 				* @hooked woocommerce_template_loop_product_title - 10
 				*/
 				?>
-				<div class="d-flex justify-content-between">
+				<a href="<?php the_permalink(); ?>" class="hover-product anim-300">
+					<span class="hover-button-product poppins fs-18 anim-300">Voir</span>
+				</a>
+				<div class="d-flex justify-content-between align-items-end">
 				<?php
 				do_action( 'woocommerce_shop_loop_item_title' );
 

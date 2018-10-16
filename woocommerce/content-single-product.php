@@ -16,7 +16,6 @@
  */
 
 defined( 'ABSPATH' ) || exit;
-
 /**
  * Hook: woocommerce_before_single_product.
  *
@@ -29,37 +28,70 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<div class="container-fluid single-product-container pl-0 pr-0">
 	<div id="product-<?php the_ID(); ?>" <?php wc_product_class(); ?>>
-		<aside>
-		<?php
-		/**
-		* Hook: woocommerce_before_single_product_summary.
-		*
-		* @hooked woocommerce_show_product_sale_flash - 10
-		* @hooked woocommerce_show_product_images - 20
-		*/
-		do_action( 'woocommerce_before_single_product_summary' );
-		?>
-		</aside>
-		<div class="summary entry-summary pt-150">
+		<div class="row ml-0 mr-0 single-product-content">
+			<aside>
 			<?php
-			/**
-			* Hook: woocommerce_single_product_summary.
-			*
-			* @hooked woocommerce_template_single_title - 5
-			* @hooked woocommerce_template_single_rating - 10
-			* @hooked woocommerce_template_single_price - 10
-			* @hooked woocommerce_template_single_excerpt - 20
-			* @hooked woocommerce_template_single_add_to_cart - 30
-			* @hooked woocommerce_template_single_meta - 40
-			* @hooked woocommerce_template_single_sharing - 50
-			* @hooked WC_Structured_Data::generate_product_data() - 60
-			*/
-			do_action( 'woocommerce_single_product_summary' );
-			?>
+				/**
+				* Hook: woocommerce_before_single_product_summary.
+				*
+				* @hooked woocommerce_show_product_sale_flash - 10
+				* @hooked woocommerce_show_product_images - 20
+				*/
+				//do_action( 'woocommerce_before_single_product_summary' );
+				?>
+				<!-- TEST SLIDER FANCYBOX -->
+				<div class="slider-thumb-product">
+				<?php
+				if( have_rows('galerie_img_produit') ):
+			    while ( have_rows('galerie_img_produit') ) : the_row();
+						$image = get_sub_field('image');
+						if( !empty($image) ): ?>
+						<a href="<?php echo $image['url']; ?>" data-fancybox>
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						</a>
+						<?php endif; ?>
+					<?php
+					endwhile;
+				else :
+				endif;
+				?>
+				</div>
+				<div class="slider-thumb-nav">
+				<?php
+				if( have_rows('galerie_img_produit') ):
+			    while ( have_rows('galerie_img_produit') ) : the_row();
+						$image = get_sub_field('image');
+						if( !empty($image) ): ?>
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<?php endif; ?>
+					<?php
+					endwhile;
+				else :
+				endif;
+				?>
+				</div>
+			</aside>
+			<div class="summary entry-summary pt-150">
+				<?php
+				/**
+				* Hook: woocommerce_single_product_summary.
+				*
+				* @hooked woocommerce_template_single_title - 5
+				* @hooked woocommerce_template_single_rating - 10
+				* @hooked woocommerce_template_single_price - 10
+				* @hooked woocommerce_template_single_excerpt - 20
+				* @hooked woocommerce_template_single_add_to_cart - 30
+				* @hooked woocommerce_template_single_meta - 40
+				* @hooked woocommerce_template_single_sharing - 50
+				* @hooked WC_Structured_Data::generate_product_data() - 60
+				*/
+				do_action( 'woocommerce_single_product_summary' );
+				?>
+			</div>
 		</div>
-
+	</div>
+	<div class="single-related-products">
 		<?php
 		/**
 		* Hook: woocommerce_after_single_product_summary.
@@ -71,6 +103,5 @@ if ( post_password_required() ) {
 		do_action( 'woocommerce_after_single_product_summary' );
 		?>
 	</div>
-</div>
 
 <?php // do_action( 'woocommerce_after_single_product' ); ?>

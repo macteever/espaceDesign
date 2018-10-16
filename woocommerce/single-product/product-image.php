@@ -44,10 +44,13 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 			$html .= sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src() ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
 			$html .= '</div>';
 		}
-
-		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id );
-
-		do_action( 'woocommerce_product_thumbnails' );
+		?>
+		<div class="test">
+	 	<?php
+			// echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id ); ?>
+		</div>
+		<?php
+			// do_action( 'woocommerce_product_thumbnails' );
 		?>
 	</figure>
 </div>

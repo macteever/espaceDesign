@@ -2,8 +2,6 @@
 
 		$(document).ready(function(){
 
-
-
     // RESIZE HEADER SCROLLTOP
 
     $(window).scroll(function(){
@@ -25,21 +23,11 @@
       }
     });
 
-    // MENU CATEGORY SUB MENU WOOCOMMERCE
-
-    // $(document).ready(function(){
-    //   $("#menu-menu-categories .menu-item-type-custom > a").click(function(){
-    //     var target = $(this).parent().children("#menu-menu-categories .sub-menu");
-    //     $(target).slideToggle();
-    //   });
-    // });
-
     // PAGE LOADER
 
     $(document).ready(function(){
         $(".page-loader").fadeOut(1000,'swing');
      });
-
     // MARGIN NEGATIVE DYNAMIC
 
     $( window ).resize(function() {
@@ -47,8 +35,6 @@
 
         $('#tarifs').css('margin-top', -marg_neg);
     });
-
-
     // MENU BURGER
       // Object variables for event handlers
       var triggers = ({
@@ -90,7 +76,7 @@
            $('#menu-btn > button').toggleClass('menu-open');
           });
 
-// START RESIZE
+			// START RESIZE
       $(window).on("load resize", function () {
 
           //**** HOME PAGE ****/
@@ -226,7 +212,6 @@
                 }
             }
         }
-
         // Resize player
         function resizePlayer(iframes, ratio) {
             if (!iframes[0]) return;
@@ -320,34 +305,45 @@
 			$('.home-blog-slider').slick({
 			  infinite: true,
         	  autoplay: false,
-			  slidesToShow: 1,
-			  slidesToScroll: 1,
+			  		slidesToShow: 1,
+			  		slidesToScroll: 1,
         	  arrows: true
 			});
+		// SLIDER + FANCY BOX SINGLE Product
+		// Init fancyBox
+			// $().fancybox({
+			//   selector : '.slick-slide:not(.slick-cloned)',
+			//   hash : false
+			// });
+			// Init Slick
+			$('.slider-thumb-product').slick({
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  arrows: true,
+		  fade: true,
+		  asNavFor: '.slider-thumb-nav',
+			 autoplay: true
+			});
+			$('.slider-thumb-nav').slick({
+			  slidesToShow: 3,
+			  slidesToScroll: 1,
+			  asNavFor: '.slider-thumb-product',
+			  dots: false,
+			  centerMode: true,
+			  focusOnSelect: true
+			});
 
-      // SLIDER PAGE BLOG
-
-      $('.subheader-blog-slider').slick({
-        infinite: true,
-        autoplay: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false
-      });
-
-
-		// // SMOOTH SCROLL
-
-  //       var $root = $("html, body");
-  //       $("a").click(function() {
-  //           var href = $.attr(this, "href");
-  //           $root.animate({
-  //               scrollTop: $(href).offset().top
-  //           }, 700, function () {
-  //               window.location.hash = href;
-  //           });
-  //           return false;
-  //       });
+	// // SMOOTH SCROLL
+	//   	var $root = $("html, body");
+	//    $("a").click(function() {
+	//    var href = $.attr(this, "href");
+	//    $root.animate({
+	//        scrollTop: $(href).offset().top
+	//         }, 700, function () {
+	//           window.location.hash = href;
+	//           });
+	//           return false;
+	//       });
 
 		});
 })(jQuery, this);

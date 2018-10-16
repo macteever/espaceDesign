@@ -17,9 +17,8 @@
 			</footer>
 		</div>
 		<!-- /wrapper -->
-
 		<?php wp_footer(); ?>
-
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
 		<!-- analytics -->
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -30,6 +29,5 @@
 		  ga('send', 'pageview');
 
 		</script>
-
 	</body>
 </html>

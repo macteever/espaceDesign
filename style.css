@@ -184,6 +184,7 @@ strong{
 .lh-24{line-height: 24px;}
 .lh-28{line-height: 28px;}
 .lh-50{line-height: 50px;}
+.lh-70{line-height: 70px;}
 .lh-100{line-height: 100px;}
 
 .ls-1{letter-spacing: 1px;}
@@ -353,8 +354,6 @@ strong{
 	position: fixed;
 	top: 0px;
 }
-
-
 /* burger menu */
 #menu-btn:hover{
 	cursor: pointer;
@@ -628,13 +627,18 @@ main{
 
 /** SINGLE PRODUCT **/
 .single-product .summary.entry-summary{
-	max-width: 650px;
+	max-width: 50%;
 	padding-right: 50px;
 	margin-left: 5%;
-	width: 50%;
+	width: 50%!important;
+	overflow-y: scroll;
+}
+.single-product .summary-child{
+	max-width: 650px;
 }
 .single-product-content{
 	height: 100vh;
+	overflow: hidden;
 }
 .single-product aside{
 	max-width: 45%;
@@ -655,8 +659,34 @@ main{
 	font-size: 18px;
 	color: #444;
 }
+.single-product .slick-slide img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
 .single-product .woocommerce-product-gallery img{
 	width: 100%!important;
+}
+.single-product .related.products ul{
+	display: flex;
+}
+.single-product .archive-product-contenu{
+	-webkit-box-flex: 0!important;
+  -ms-flex: 0 0 50%!important;
+  flex: 0 0 50%!important;
+  max-width: 50%!important;
+}
+.single-product .hover-product{
+	height: 300px!important;
+}
+.single-product .related.products img{
+	height: 300px!important;
+}
+.shipping-free-btn{
+	border: 1px solid #4A4A4A;
+	border-radius: 45px;
+	padding: 8px 45px;
+  height: 45px;
 }
 /* slider product */
 .slider-thumb-product{
@@ -679,6 +709,7 @@ main{
 	object-fit: cover;
 	border: solid 1px #EAEAEA;
 	margin-left: 15px;
+	cursor: pointer;
 }
 /* fin slider product */
 .single-product form.variations_form.cart {
@@ -687,8 +718,8 @@ main{
 .woocommerce div.product form.cart .button {
     vertical-align: middle;
     width: auto;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 45px;
+    padding-right: 45px;
     padding-bottom: 10px;
     padding-top: 10px;
     height: 45px;
@@ -769,7 +800,7 @@ main{
 	flex-wrap: wrap;
 	margin-top: 50px!important;
 }
-.woocommerce ul.products li.product a img{
+.archive.woocommerce ul.products li.product a img{
 	width: 100%;
 	height: 350px!important;
 	object-fit: cover;

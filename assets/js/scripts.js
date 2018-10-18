@@ -311,18 +311,19 @@
 			});
 		// SLIDER + FANCY BOX SINGLE Product
 		// Init fancyBox
-			// $().fancybox({
-			//   selector : '.slick-slide:not(.slick-cloned)',
-			//   hash : false
-			// });
+			$().fancybox({
+			  selector : '.slider-thumb-product .slick-slide:not(.slick-cloned)',
+			  hash : false
+			});
 			// Init Slick
 			$('.slider-thumb-product').slick({
 		  slidesToShow: 1,
 		  slidesToScroll: 1,
+			infinite: true,
 		  arrows: true,
 		  fade: true,
 		  asNavFor: '.slider-thumb-nav',
-			 autoplay: true
+			autoplay: true
 			});
 			$('.slider-thumb-nav').slick({
 			  slidesToShow: 3,

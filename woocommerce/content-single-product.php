@@ -31,6 +31,7 @@ if ( post_password_required() ) {
 	<div id="product-<?php the_ID(); ?>" <?php wc_product_class(); ?>>
 		<div class="row ml-0 mr-0 single-product-content">
 			<aside>
+
 			<?php
 				/**
 				* Hook: woocommerce_before_single_product_summary.
@@ -73,6 +74,7 @@ if ( post_password_required() ) {
 				</div>
 			</aside>
 			<div class="summary entry-summary pt-150">
+        <div class="summary-child">
 				<?php
 				/**
 				* Hook: woocommerce_single_product_summary.
@@ -88,20 +90,21 @@ if ( post_password_required() ) {
 				*/
 				do_action( 'woocommerce_single_product_summary' );
 				?>
+        <?php
+        /**
+        * Hook: woocommerce_after_single_product_summary.
+        *
+        * @hooked woocommerce_output_product_data_tabs - 10
+        * @hooked woocommerce_upsell_display - 15
+        * @hooked woocommerce_output_related_products - 20
+        */
+        do_action( 'woocommerce_after_single_product_summary' );
+        ?>
+        </div>
 			</div>
 		</div>
 	</div>
 	<div class="single-related-products">
-		<?php
-		/**
-		* Hook: woocommerce_after_single_product_summary.
-		*
-		* @hooked woocommerce_output_product_data_tabs - 10
-		* @hooked woocommerce_upsell_display - 15
-		* @hooked woocommerce_output_related_products - 20
-		*/
-		do_action( 'woocommerce_after_single_product_summary' );
-		?>
 	</div>
 
 <?php // do_action( 'woocommerce_after_single_product' ); ?>

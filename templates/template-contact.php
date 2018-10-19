@@ -12,6 +12,7 @@
 						</div>
 						<div class="contact-map float-left col-xl-6 col-lg-6 col-md-6 col-12 pr-0">
 							<div id="map"></div>
+							
 						</div>
 					</div>
 

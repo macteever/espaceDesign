@@ -76,6 +76,12 @@
            $('#menu-btn > button').toggleClass('menu-open');
           });
 
+					// SUB MENU header
+					$('#menu-item-147').click(function() {
+						$('.sub-menu').toggleClass('translate-submenu');
+						$('.submenu-chevron').toggleClass('submenu-chevron-rotate');
+					});
+
 			// START RESIZE
       $(window).on("load resize", function () {
 

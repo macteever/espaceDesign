@@ -350,7 +350,7 @@ strong{
 /* header */
 .header {
 	width: 100%;
-	z-index: 99999;
+	z-index: 9999;
 	position: fixed;
 	top: 0px;
 }
@@ -491,6 +491,31 @@ main{
 }
 .resize-menu .logo svg{
 	margin-top: 15px;
+}
+header .sub-menu{
+	position: fixed;
+    width: 100%;
+    left: 0px;
+    display: flex;
+		padding-left: 0px!important;
+		padding-right: 50px;
+		padding-top: 15px;
+		transform: translateY(-100px);
+		-webkit-transition: all 300ms ease-out;
+		-moz-transition: all 300ms ease-out;
+		-ms-transition: all 300ms ease-out;
+		-o-transition: all 300ms ease-out;
+		transition: all 300ms ease-out;
+}
+header .sub-menu li{
+	list-style-type: none;
+    margin-left: 40px;
+}
+.submenu-chevron-rotate{
+	transform: rotate(180deg);
+}
+.translate-submenu{
+	transform: translateY(0px)!important;
 }
 /* sidebar */
 

@@ -318,6 +318,9 @@ strong{
 .pt-100{padding-top: 100px;}
 .pt-120{padding-top: 120px;}
 .pt-150{padding-top: 150px;}
+.pt-200{padding-top: 200px;}
+.pt-250{padding-top: 250px;}
+.pt-300{padding-top: 300px;}
 
 .pl-0{padding-left: 0!important;}
 .pl-5{padding-left: 5px;}
@@ -445,7 +448,7 @@ button.menu-open span {
 	width: 39px;
 	height: 66px;
 	color: #FFF;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 /* nav */
 .nav {
@@ -1256,6 +1259,32 @@ textarea{
 }
 
 /***********PAGE BLOG *************/
+.main-actus{
+	min-height: 100vh;
+}
+.main-actus .logo .cls-1{
+	fill: #000000;
+}
+.posts-container{
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+	overflow-y: scroll;
+	height: 100vh;
+}
+.posts-btn{
+	padding: 5px 25px;
+	border: 1px solid #C75527;
+	border-radius: 100px;
+}
+.index-category ul{
+	padding-left: 0px;
+	list-style-type: none;
+}
+.posts-container .posts-billet:nth-child(odd){
+	margin-top: 50px;
+}
+/***/
 .subheader-blog-slider h3{
 	letter-spacing: 2px;
 }
@@ -1286,14 +1315,7 @@ textarea{
 	background-color: #fff;
   padding: 30px 30px 20px 30px;
 }
-.post-billet:hover{
-	transform: translate(25px, 0px);
-	-webkit-transition: all 300ms ease-out;
-	-moz-transition: all 300ms ease-out;
-	-ms-transition: all 300ms ease-out;
-	-o-transition: all 300ms ease-out;
-	transition: all 300ms ease-out;
-}
+
 .blog-posts a:hover{
 	text-decoration: none;
 }

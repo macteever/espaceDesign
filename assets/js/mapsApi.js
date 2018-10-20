@@ -168,7 +168,7 @@ function initMap() {
 				  var marker = new google.maps.Marker({
 				    map: map,
 				    position: myLatLng,
-						  icon :'../wp-content/themes/espaceDesign/assets/img/mapmarker.png'
+						 icon :'../wp-content/themes/espaceDesign/assets/img/mapmarker.png'
 				  });
 
 

@@ -6,7 +6,7 @@
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
   	<link href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/favicon.ico" rel="shortcut icon">
   	<link href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/apple-touch-icon.png" rel="apple-touch-icon-precomposed">
-		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500|Source+Sans+Pro:300,400" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700|Source+Sans+Pro:300,400" rel="stylesheet">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css">

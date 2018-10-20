@@ -19,17 +19,26 @@
 							<img class="mb-30" src="<?=get_template_directory_uri().'/assets/img/actus-chevron.svg'?>" alt="espace design bordeaux mobilier design tableaux créateurs">
 						</div>
 						<?php
-						if ( have_posts() ) :
+
 							?>
 						<div class="index-category d-flex flex-column text-center fs-18">
-							<?php  while ( have_posts() ) : the_post();
-							the_category();
-								endwhile;
-							 ?>
+							<?php
+					    $terms = get_categories();
+					    foreach ($terms as $term){
+					        $term_link = get_term_link($term);
+								?>
+					      <div class="mb-10">
+									<a href="<?php echo $term_link ?>" data-id="<?php; echo $term->term_id; ?>" data-slug="<?php echo $term->slug; ?>">
+										<h4 class='fs-18 py-15 px-30'><?php echo $term->name; ?></h4>
+									</a>
+								</div>
+					    <?php }
+					    ?>
 						</div>
 					</div>
 					<div class="col-xl-8 col-lg-8 col-md-12 col-12 mt-150 pb-200 posts-container">
 						<?php
+						if ( have_posts() ) :
 						while ( have_posts() ) : the_post();
 						?>
 						<div class="col-xl-6 col-lg-6 col-md-12 col-12 posts-billet">

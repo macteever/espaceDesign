@@ -63,7 +63,10 @@ img {
 	max-width:100%;
 	vertical-align:bottom;
 }
-.archive a:not([href]):not([tabindex]), .archive a:not([href]):not([tabindex]):hover, .home a:not([href]):not([tabindex]), .home a:not([href]):not([tabindex]):hover{
+.post-type-archive-product a:not([href]):not([tabindex]),
+.post-type-archive-product a:not([href]):not([tabindex]):hover,
+.home a:not([href]):not([tabindex]),
+.home a:not([href]):not([tabindex]):hover{
 	color: #FFF;
 }
 a {

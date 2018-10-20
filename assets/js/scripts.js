@@ -11,7 +11,7 @@
       if ($(this).scrollTop() > 40){
         if(!$header.hasClass('resize-menu') && !$logo_img.hasClass('resize-logo')) {
             $header.addClass('resize-menu');
-						$menu_section.css({"height": 60});
+						// $menu_section.css({"height": 60});
             $logo_img.addClass('resize-logo');
         }
       }
@@ -80,6 +80,7 @@
 					$('#menu-item-147').click(function() {
 						$('.sub-menu').toggleClass('translate-submenu');
 						$('.submenu-chevron').toggleClass('submenu-chevron-rotate');
+						$('.menu-container').toggleClass('header-menu-bkg');
 					});
 
 			// START RESIZE

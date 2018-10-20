@@ -464,6 +464,7 @@ main{
 .menu-container .large-menu ul li{
 	list-style-type: none;
 	margin-left: 40px;
+	cursor: pointer;
 }
 .header-menu-bkg a, .translate-submenu a{
 	color: #444!important;
@@ -491,11 +492,12 @@ main{
 
 .resize-menu{
 	background: #000000d1;
-   border-bottom: solid 1px #EAEAEA;
+  border-bottom: solid 1px #EAEAEA;
 }
-/* .resize-menu .logo svg{
-	margin-top: 15px;
-} */
+.resize-menu .logo .cls-1{
+	fill: #FFFFFF!important;
+}
+/* submenu */
 header .sub-menu{
 	position: fixed;
     width: 100%;
@@ -520,23 +522,26 @@ header .sub-menu li{
 .submenu-chevron-rotate{
 	transform: rotate(180deg);
 }
+
 .translate-submenu{
   transform: translateY(30px)!important;
   background-color: #FFF;
   border-bottom: solid 1px #EAEAEA;
 	z-index: -1;
-	animation-delay: 5000ms;
+}
+.resize-menu .translate-submenu{
+	background-color: #000000d1;
 }
 .header-menu-bkg{
 	background-color: #FFFFFF;
 	border-bottom: solid 1px #EAEAEA;
-	animation-delay: 1000ms;
+}
+.resize-menu .header-menu-bkg{
+	background-color: #000000d1;
 }
 .header-menu-bkg .logo .cls-1{
 	fill: #444444;
 }
-/* sidebar */
-
 /* footer */
 .footer {
 	border-top: solid 1px #3D3D3D;
@@ -573,7 +578,6 @@ header .sub-menu li{
 	padding: 8px 30px;
 }
 .orange-brd-btn-shadow{
-	/* Rectangle 4: */
 	background: rgba(0,0,0,0.50);
 	border: 1px solid #C75527;
 	border-radius: 100px;
@@ -1163,8 +1167,14 @@ header .sub-menu li{
 	width: 100%!important;
 }
 /** PAGE CONTACT **/
+.page-template-template-contact .logo .cls-1{
+	fill: #000000;
+}
 .page-template-template-contact h1{
 	margin-left: 5%;
+}
+.page-template-template-contact h3{
+	margin-top: -15px;
 }
 .page-template-template-contact h3::after{
 	content: '';
@@ -1182,8 +1192,22 @@ header .sub-menu li{
 	background-color: #D8D8D8;
 	margin-left: 30px;
 }
+.before-map{
+	height: 300px;
+	z-index: 999;
+	position: relative;
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}
+.map{
+	margin-top: -300px;
+}
 #map{
-	height: 350px;
+	height: 500px;
+	position: relative!important;
+	width: 100%;
 }
 input{
 	height: 50px;
@@ -1460,11 +1484,6 @@ textarea{
 		font-size: 44px;
 	}
 	/* CONTACT */
-
-	.contact-map{
-		float: none!important;
-		padding-left: 0px;
-	}
 	.contact input, textarea{
 		width: 100%;
 	}
@@ -1473,10 +1492,6 @@ textarea{
 		width: 100%!important;
 		margin-top: 110px;
 		margin-left: 0px!important;
-	}
-	#map{
-		height: 250px;
-		border-left: none;
 	}
 	/*PANIER*/
 	.woocommerce-cart h1{

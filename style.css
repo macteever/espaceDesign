@@ -63,6 +63,9 @@ img {
 	max-width:100%;
 	vertical-align:bottom;
 }
+.archive a:not([href]):not([tabindex]), .archive a:not([href]):not([tabindex]):hover, .home a:not([href]):not([tabindex]), .home a:not([href]):not([tabindex]):hover{
+	color: #FFF;
+}
 a {
 	color:#444;
 	text-decoration:none!important;
@@ -473,7 +476,7 @@ main{
 	color: #444!important;
 }
 .page-template-template-home ul li a, .page-template-template-home ul li .fa, .post-type-archive-product ul li a, .post-type-archive-product ul li .fa, .archive.tax-product_cat ul li a, .archive.tax-product_cat ul li .fa{
-	color: #FFF!important;
+	color: #FFF;
 }
  .resize-menu ul li a, .resize-menu ul li .fa{
 	color: #FFF!important;
@@ -541,6 +544,9 @@ header .sub-menu li{
 }
 .resize-menu .header-menu-bkg{
 	background-color: #000000d1;
+}
+.header-menu-bkg .fa{
+	color: #444444!important;
 }
 .header-menu-bkg .logo .cls-1{
 	fill: #444444;
@@ -1276,49 +1282,32 @@ textarea{
 	padding: 5px 25px;
 	border: 1px solid #C75527;
 	border-radius: 100px;
+	background-color: rgba(0, 0, 0, 0.52);
 }
 .index-category ul{
 	padding-left: 0px;
 	list-style-type: none;
 }
 .posts-container .posts-billet:nth-child(odd){
-	margin-top: 50px;
+	margin-top: 80px;
 }
-/***/
-.subheader-blog-slider h3{
-	letter-spacing: 2px;
+.posts-billets{
+	position: relative;
 }
-.subheader-blog-slider a{
-	font-weight: 400;
-	padding: 10px;
-	border: solid 1px #fff;
-	border-radius: 3px;
-	background-color: rgba(234, 234,234, 0.2);
+.posts-billets .posts-link{
+	position: absolute;
+	width: 100%;
+	height: 100%;
 }
-.subheader-blog-slider a:hover{
-	color: #fff;
-	text-decoration: none;
-}
-
-.blog-bkg{
-	background-color: #eaeaea;
-}
-.blog-content h2:before{
-	content: "";
-	display: block;
-    height: 1px;
-    width: 70%;
-    background: #2a2c53;
-    margin-bottom: 15px;
- }
-.blog-posts{
-	background-color: #fff;
-  padding: 30px 30px 20px 30px;
+.blk-filter{
+	/* background: rgba(0,0,0,0.33);
+	width: calc(100% - 30px);
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 15px; */
 }
 
-.blog-posts a:hover{
-	text-decoration: none;
-}
 /***********PAGE ARTICLES *************/
 .posts-bkg{
 	background-color: #eaeaea;

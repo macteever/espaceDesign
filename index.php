@@ -16,7 +16,7 @@
 						</h1>
 						<div class="d-flex flex-column justify-content-center">
 							<h2 class="text-center fs-22 mt-50 mb-30">Filtrer par catégorie</h2>
-							<img class="mb-15" src="<?=get_template_directory_uri().'/assets/img/actus-chevron.svg'?>" alt="espace design bordeaux mobilier design tableaux créateurs">
+							<img class="mb-30" src="<?=get_template_directory_uri().'/assets/img/actus-chevron.svg'?>" alt="espace design bordeaux mobilier design tableaux créateurs">
 						</div>
 						<?php
 						if ( have_posts() ) :
@@ -33,21 +33,22 @@
 						while ( have_posts() ) : the_post();
 						?>
 						<div class="col-xl-6 col-lg-6 col-md-12 col-12 posts-billet">
+							<a class="d-block posts-link" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 							<div class="posts-content text-white pt-300 pb-30 p-15" style="background: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>'); background-size: cover; background-position: center;">
-								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 									<div class="d-flex flex-column">
-									<h3 class="fs-36 uppercase text-white"><?php the_title(); ?></h3>
-									<p class="text-white mb-30">
-										<?php $category_detail=get_the_category();//$post->ID
-											 foreach($category_detail as $cd){
-											 echo $cd->cat_name;
-											 }
-										?>
-									</p>
-									<div><a class="text-white fs-18 posts-btn ls-1" href="<?php the_permalink(); ?>">Lire l'article</a></div>
+										<h3 class="fs-36 uppercase text-white"><?php the_title(); ?></h3>
+										<p class="text-white mb-30">
+											<?php $category_detail=get_the_category();//$post->ID
+												 foreach($category_detail as $cd){
+												 echo $cd->cat_name;
+												 }
+											?>
+										</p>
+										<div><a class="text-white fs-18 posts-btn ls-1" href="<?php the_permalink(); ?>">Lire l'article</a></div>
 									</div>
-								</a>
+									<div class="blk-filter"></div>
 							</div>
+							</a>
 						</div>
 						<?php
 					endwhile;

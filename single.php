@@ -16,8 +16,8 @@
 							<h1 class="text-orange fs-66 fw-600 mb-20"><?php the_title(); ?></h1>
 							<!-- /post title -->
 							<div class="post-details mt-30 mb-20">
-								<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author(); ?></span>
-								<span class="date"> le <?php the_time('j F Y'); ?></span>
+								<span class="author fs-15"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author(); ?></span>
+								<span class="date fs-15"> le <?php the_time('j F Y'); ?></span>
 								<span class="float-right hidden-xs"><b><a href="/actualites"><i class="fa fa-angle-left fs-16 ml-15 mr-15" aria-hidden="true"></i>Retour page articles</a></b></span>
 							</div>
 							<div class="fs-18 lh-24 sourcepro">

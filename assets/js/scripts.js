@@ -341,6 +341,20 @@
 			  focusOnSelect: true
 			});
 
+			// SLIDER + FANCY BOX PAGE MAGASIN
+			$().fancybox({
+			  selector : '.mag-slider .slick-slide:not(.slick-cloned)',
+			  hash : false
+			});
+			// Init Slick
+			$('.mag-slider').slick({
+				slidesToShow: 3,
+		  	slidesToScroll: 1,
+				infinite: true,
+			  arrows: true,
+				autoplay: false
+				});
+
 	// // SMOOTH SCROLL
 	//   	var $root = $("html, body");
 	//    $("a").click(function() {

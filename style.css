@@ -239,6 +239,7 @@ strong{
 .mt-140{margin-top: 140px;}
 .mt-150{margin-top: 150px;}
 .mt-200{margin-top: 200px;}
+.mt-300{margin-top: 300px;}
 .mt-350{margin-top: 350px;}
 
 .mb-0{margin-bottom: 0px;}
@@ -255,6 +256,8 @@ strong{
 .mb-130{margin-bottom: 130px;}
 .mb-140{margin-bottom: 140px;}
 .mb-150{margin-bottom: 150px;}
+.mb-200{margin-bottom: 200px;}
+.mb-250{margin-bottom: 250px;}
 .mb-350{margin-bottom: 350px;}
 
 
@@ -313,6 +316,7 @@ strong{
 .pb-50{padding-bottom: 50px;}
 .pb-80{padding-bottom: 80px;}
 .pb-100{padding-bottom: 100px;}
+.pb-150{padding-bottom: 150px;}
 .pb-200{padding-bottom: 200px;}
 .pb-250{padding-bottom: 250px;}
 .pb-300{padding-bottom: 300px;}
@@ -694,7 +698,48 @@ header .sub-menu li{
 }
 .home-blog-slider .slick-prev{left: -80px;}
 .home-blog-slider .slick-next{right: -80px;}
-
+/** PAGE MAGASIN **/
+.mag-intro::before{
+	content: url(/~nicolasmetivier/espacedesign/wp-content/themes/espaceDesign/assets/img/logo.svg);
+	display: block;
+	opacity: 0.15;
+	width: 230px;
+	margin-left: auto;
+	position: absolute;
+}
+.part-presentation1{
+	position: relative;
+}
+.part-presentation1::before{
+	content: '';
+	display: block;
+	height: 150px;
+	width: 2px;
+	background-color: #C75527;
+	position: absolute;
+	top: -20px;
+}
+.part-presentation2{
+	background-color: #000000;
+}
+.featured-infos{
+	border-left: solid 2px #C75527;
+}
+.mag-slider{
+	height: 350px;
+}
+.mag-slider .slick-list.draggable, .mag-slider .slick-track{
+	height: 100%;
+}
+.mag-slide{
+	margin: 0px 2px;
+}
+.mag-slide img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	margin: 0px 10px;
+}
 /** SINGLE PRODUCT **/
 .single-product .summary.entry-summary{
 	max-width: 50%;
@@ -1190,7 +1235,7 @@ header .sub-menu li{
 	width: 100%!important;
 }
 /** PAGE CONTACT **/
-.page-template-template-contact .logo .cls-1{
+.page-template-template-contact .logo .cls-1, .page-template-template-magasin .logo .cls-1{
 	fill: #000000;
 }
 .page-template-template-contact h1{

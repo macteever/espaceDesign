@@ -104,6 +104,7 @@ if ( post_password_required() ) {
 			</div>
 		</div>
 	</div>
+
 	<div class="single-related-products">
 	</div>
 

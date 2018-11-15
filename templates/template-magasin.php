@@ -99,7 +99,10 @@
             while ( have_rows('bas_de_page') ) : the_row();
             ?>
           <div class="col-xl-6 col-lg-6 col-md-12 col-12 fs-18 lh-24">
+            <p class="mb-30">
             <?php the_sub_field('texte'); ?>
+            </p>
+            <a class="orange-btn" href="<?php the_sub_field('lien'); ?>">Nos créations</a>
           </div>
           <div class="col-xl-5 col-lg-5 col-md-12 col-12">
 

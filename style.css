@@ -362,7 +362,10 @@ strong{
     STRUCTURE
 \*------------------------------------*/
 
-
+.border-x-orange{
+	border-left: solid 2px #C75527;
+	border-right: solid 2px #C75527;
+}
 /* wrapper */
 .wrapper {
 }
@@ -599,10 +602,16 @@ header .sub-menu li{
 }
 .orange-btn{
 	background: #C75527;
+	border: solid 1px #C75527;
 	border-radius: 100px;
-	font-size: 18px;
+	font-size: 16px;
 	color: #FFFFFF;
 	padding: 8px 30px;
+}
+.orange-btn:hover{
+	background: transparent;
+	border: solid 1px #C75527;
+	color: #4d4d4d;
 }
 .orange-brd-btn-shadow{
 	background: rgba(0,0,0,0.50);
@@ -721,6 +730,7 @@ header .sub-menu li{
 }
 .part-presentation2{
 	background-color: #000000;
+	margin-top: -10px;
 }
 .featured-infos{
 	border-left: solid 2px #C75527;
@@ -745,7 +755,7 @@ header .sub-menu li{
 	max-width: 50%;
 	padding-right: 50px;
 	margin-left: 5%;
-	width: 50%!important;
+	width: 45%!important;
 	overflow-y: scroll;
 }
 .single-product .summary-child{
@@ -756,8 +766,8 @@ header .sub-menu li{
 	overflow: hidden;
 }
 .single-product aside{
-	max-width: 45%;
-	width: 45%;
+	max-width: 50%;
+	width: 50%;
 }
 .single-product .woocommerce-product-gallery{
 	width: 100%!important;
@@ -1273,7 +1283,7 @@ header .sub-menu li{
 	margin-top: -300px;
 }
 #map{
-	height: 500px;
+	height: 650px;
 	position: relative!important;
 	width: 100%;
 }
@@ -1415,7 +1425,45 @@ textarea{
 	margin-left: auto;
 	margin-right: auto;
 }
-
+/***********PAGE PARTNER ************/
+.page-template-template-partner strong{
+	font-weight: 700!important;
+}
+.partner-top-page{
+	background-size: cover!important;
+	background-repeat: no-repeat!important;
+}
+.commerce-event-row:nth-child(2n){
+	flex-direction: row-reverse;
+}
+.list-partner-title::before{
+	content: '';
+	display: block;
+	width: 1px;
+	height: 150px;
+	background-color: #C75527;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -75px;
+	margin-bottom: 15px;
+}
+.list-partner-title::after{
+	content: '';
+	display: block;
+	width: 1px;
+	height: 100px;
+	background-color: #C75527;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+}
+.partner-list-partners{
+	background-color: #000000;
+}
+.partner-list-partners ul{
+	list-style-type: none!important;
+	padding-left: 0px;
+}
 /*********** PAGE 404 *************/
 
 #page-404 section{

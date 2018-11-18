@@ -26,13 +26,13 @@
     else :
     endif;
     ?>
-    <div class="container mt-150">
+    <div class="container partner-repeater mt-150">
       <?php
       if( have_rows('commerce_event') ):
         while ( have_rows('commerce_event') ) : the_row();
         ?>
         <div class="row commerce-event-row mb-150 align-items-end justify-content-around">
-          <div class="col-xl-6 col-lg-6 col-12">
+          <div class="col-xl-6 col-lg-6 col-12 ">
             <div class="commerce-event-title poppins fs-28 fw-600">
               <?php the_sub_field('titre'); ?>
             </div>

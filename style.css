@@ -1320,6 +1320,9 @@ textarea{
 	letter-spacing: 0.41px;
 	padding: 10px;
 }
+.contact-name{
+	width: 95%;
+}
 .contact-submit{
 	background-color: #C75527;
 	color: white;
@@ -1528,16 +1531,16 @@ textarea{
 		display: block;
 	}
 	/* MAGASIN */
-	.page-template-template-magasin #menu-btn button span, .page-template-template-partner #menu-btn button span{
+	.page-template-template-magasin #menu-btn button span, .page-template-template-partner #menu-btn button span, .page-template-template-contact #menu-btn button span{
 		background-color: #4D4D4D;
 	}
-	.page-template-template-magasin #menu-btn span, .page-template-template-partner #menu-btn span{
+	.page-template-template-magasin #menu-btn span, .page-template-template-partner #menu-btn span, .page-template-template-contact #menu-btn span{
 		color: #4D4D4D!important;
 	}
-	.page-template-template-magasin .resize-menu #menu-btn button span, .page-template-template-partner .resize-menu #menu-btn button span{
+	.page-template-template-magasin .resize-menu #menu-btn button span, .page-template-template-partner .resize-menu #menu-btn button span, .page-template-template-contact .resize-menu #menu-btn button span{
 		background-color: #FFF;
 	}
-	.page-template-template-magasin .resize-menu #menu-btn span, .page-template-template-partner .resize-menu #menu-btn span{
+	.page-template-template-magasin .resize-menu #menu-btn span, .page-template-template-partner .resize-menu #menu-btn span, .page-template-template-contact .resize-menu #menu-btn span{
 		color: #FFF!important;
 	}
 	.menu-container .large-menu ul{
@@ -1636,8 +1639,9 @@ textarea{
 	.contact h1{
 		font-size: 42px;
 	}
-	.contact input, textarea{
-		width: 90%;
+
+	.tmplt-contact-coord{
+		margin-top: 100px;
 	}
 }
 @media only screen and (max-width:767px) {
@@ -1783,11 +1787,14 @@ textarea{
 	.contact input, textarea{
 		width: 100%;
 	}
-	.contact .text-container-left{
-		float: none!important;
-		width: 100%!important;
-		margin-top: 110px;
-		margin-left: 0px!important;
+	.flex-contact{
+		flex-wrap: wrap;
+	}
+	.flex-contact span{
+		width: 100%;
+	}
+	.page-template-template-contact h1 span{
+		font-size: 48px;
 	}
 	/*PANIER*/
 	.woocommerce-cart h1{

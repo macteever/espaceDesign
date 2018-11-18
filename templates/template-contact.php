@@ -8,7 +8,7 @@
 				<div class="col-xl-5 col-lg-5 col-md-12 col-12">
 					<?php echo do_shortcode('[contact-form-7 id="150" title="page-contact"]'); ?>
 				</div>
-				<div class="col-xl-5 col-lg-5 col-md-12 col-12 d-flex flex-column justify-content-around">
+				<div class="col-xl-5 col-lg-5 col-md-12 col-12 d-flex flex-column justify-content-around tmplt-contact-coord">
 					<h3 class="fs-20 fw-300">Nous trouver</h3>
 					<?php
 					if( have_rows('coord_horaire') ):

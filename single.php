@@ -4,10 +4,10 @@
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="container-fluid">
-				<div class="row" style="background: background: -webkit-linear-gradient(rgba(0,0,0,0.33) 15%, rgba(0,0,0,0.33) 100%);
+				<div class="row single-post-bkg" style="background: background: -webkit-linear-gradient(rgba(0,0,0,0.33) 15%, rgba(0,0,0,0.33) 100%);
 		    background: -o-linear-gradient(rgba(0,0,0,0.33) 15%, rgba(0,0,0,0.33) 100%);
 		    background: linear-gradient(rgba(0,0,0,0.33) 15%, rgba(0,0,0,0.33) 100%),
-				url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>'); background-size: cover; height: 400px; background-position: center; background-attachment: fixed;">
+				url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>'); background-size: cover; background-position: center; background-attachment: fixed;">
 				</div>
 				<div class="container post-container p-30">
 					<div class="row">

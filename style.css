@@ -1407,6 +1407,9 @@ textarea{
 } */
 
 /***********SINGLE POST *************/
+.single-post-bkg{
+	height: 400px!important;
+}
 .post-content{
 	border-right: solid 1px #EAEAEA;
 }
@@ -1618,6 +1621,17 @@ textarea{
 	.commerce-event-row>div{
 		margin-top: 80px;
 	}
+	/* BLOG */
+	.main-actus h1{
+		text-align: center;
+	}
+	.main-actus .posts-container{
+		margin-top: 80px!important;
+		height: auto!important;
+	}
+	.main-actus .posts-container .posts-billet:nth-child(odd){
+		transform: none;
+	}
 	/* CONTACT */
 	.contact h1{
 		font-size: 42px;
@@ -1721,6 +1735,32 @@ textarea{
 	}
 	.partner-repeater{
 		margin-top: 0px!important;
+	}
+	/* BLOG */
+	.main-actus h1{
+		font-size: 32px;
+	}
+	.main-actus h1 span{
+		font-size: 48px;
+	}
+	.main-actus .posts-billet img{
+		height: 350px;
+	}
+	.main-actus .posts-container .posts-billet{
+		padding-bottom: 30px;
+	}
+	.posts-billet .single-post-filter {
+    height: calc(100% - 30px);
+	}
+	/* SINGLE POST */
+	.single-post .post-container{
+		padding: 0px!important;
+	}
+	.single-post-bkg{
+		height: 280px!important;
+	}
+	.single-post .post-related ul{
+		padding-left: 0px;
 	}
 	/* MON COMPTE */
 	.woocommerce-account section{

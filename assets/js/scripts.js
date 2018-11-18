@@ -103,35 +103,6 @@
                     $('.home-about-cadre').removeClass('cadre-anim');
                   }
             });
-						
-      /*  CONTAINER FULL WIDTH TEXT GRID */
-				 //
-         // var w_container = $('.container').width();
-         // var w_window =$( window ).width();
-         // $('.text-container').css("width", w_container/2);
-         // $('.text-container-left').css("width", w_container/2);
-         // $('.text-container-left').css("margin-left",(w_window - w_container)/2);
-         // $('.text-container-left-p').css("padding-left",(w_window - w_container)/2);
-				 //
-         // $('.text-container4').css('width', w_container/3);
-         // $('.text-container4-left').css("width", w_container/3);
-         // $('.text-container4-left').css("margin-left",(w_window - w_container)/2);
-				 //
-         // $('.text-container5').css('width', w_container/2.4);
-         // $('.text-container5-left').css("width", w_container/2.4);
-         // $('.text-container5-left').css("margin-left",(w_window - w_container)/2);
-				 //
-         //  $('.text-container5-5').css('width', w_container/2.18);
-         // $('.text-container5-5-left').css("width", w_container/2.18);
-         // $('.text-container5-5-left').css("margin-left",(w_window - w_container)/2);
-				 //
-         // $('.text-container4-padding').css('width', w_container/3);
-         // $('.text-container4-left-padding').css("width", (w_container/3) + (w_window - w_container)/2);
-         // $('.text-container4-left-padding').css("padding-left",(w_window - w_container)/2);
-				 //
-				 //
-         // var wf_container = $('.container-fluid').width();
-         // $('.text-container-fluid').css("width", wf_container/2);
 
       }).resize();
 		// END RESIZE
@@ -350,20 +321,26 @@
 		  	slidesToScroll: 1,
 				infinite: true,
 			  arrows: true,
-				autoplay: false
+				autoplay: false,
+				responsive: [
+			    {
+			      breakpoint: 768,
+			      settings: {
+			        slidesToShow: 2,
+			        slidesToScroll: 2
+			      }
+			    },
+			    {
+			      breakpoint: 480,
+			      settings: {
+			        slidesToShow: 1,
+			        slidesToScroll: 1
+			      }
+			    }
+					]
 				});
 
-	// // SMOOTH SCROLL
-	//   	var $root = $("html, body");
-	//    $("a").click(function() {
-	//    var href = $.attr(this, "href");
-	//    $root.animate({
-	//        scrollTop: $(href).offset().top
-	//         }, 700, function () {
-	//           window.location.hash = href;
-	//           });
-	//           return false;
-	//       });
+
 
 		});
 })(jQuery, this);

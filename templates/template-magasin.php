@@ -46,7 +46,7 @@
       endif;
       ?>
       <div class="container">
-        <div class="row justify-content-between pt-150 pb-150">
+        <div class="row justify-content-between pt-150 pb-150 part-presentation3">
           <?php
           if( have_rows('part_details') ):
             while ( have_rows('part_details') ) : the_row();
@@ -98,7 +98,7 @@
           if( have_rows('bas_de_page') ):
             while ( have_rows('bas_de_page') ) : the_row();
             ?>
-          <div class="col-xl-6 col-lg-6 col-md-12 col-12 fs-18 lh-24">
+          <div class="col-xl-6 col-lg-6 col-md-12 col-12 fs-18 lh-24 pb-15">
             <p class="mb-30">
             <?php the_sub_field('texte'); ?>
             </p>

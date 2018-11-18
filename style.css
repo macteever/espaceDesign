@@ -1524,6 +1524,18 @@ textarea{
 	#menu-btn{
 		display: block;
 	}
+	.page-template-template-magasin #menu-btn button span{
+		background-color: #4D4D4D;
+	}
+	.page-template-template-magasin #menu-btn span{
+		color: #4D4D4D!important;
+	}
+	.page-template-template-magasin .resize-menu #menu-btn button span{
+		background-color: #FFF;
+	}
+	.page-template-template-magasin .resize-menu #menu-btn span{
+		color: #FFF!important;
+	}
 	.menu-container .large-menu ul{
 		display: none;
 	}
@@ -1597,6 +1609,10 @@ textarea{
 	.archive-product-contenu li{
 		width: 100%!important;
 	}
+	/* LE MAGASIN */
+	.page-template-template-magasin .featured-infos{
+		margin-top: 80px;
+	}
 	/* CONTACT */
 	.contact h1{
 		font-size: 42px;
@@ -1665,6 +1681,27 @@ textarea{
 	}
 	.home-news-container .border-x{
 		border: none;
+	}
+	/* MAGASIN */
+	.page-template-template-magasin h1{
+		font-size: 32px!important;
+	}
+	.page-template-template-magasin h1 span{
+		font-size: 52px!important;
+	}
+	.page-template-template-magasin .part-presentation1::before {
+    top: -75px;
+	}
+	.page-template-template-magasin .part-presentation1 h2{
+		margin-top: 150px!important;
+		font-size: 28px;
+		line-height: 36px;
+	}
+	.page-template-template-magasin .part-presentation3{
+		padding-top: 100px!important;
+	}
+	.page-template-template-magasin .featured-infos h3{
+		font-size: 28px!important;
 	}
 	/* MON COMPTE */
 	.woocommerce-account section{

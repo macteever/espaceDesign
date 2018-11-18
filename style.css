@@ -396,9 +396,9 @@ strong{
 	top: 0;
 	left: 0;
 	position: fixed;
-	z-index: 9999;
-    overflow-y: scroll;
-    display: none;
+	z-index: 999;
+  overflow-y: scroll;
+  display: none;
 }
 .nav-mobile ul{
 	margin-top: 150px;
@@ -434,7 +434,7 @@ button span {
   display: block;
   height: 2px;
   width: 100%;
-  background: #3D3D3D;
+  background: #FFF;
   transition: top 0.2s 0.2s linear, opacity 0.1s 0.2s linear, transform 0.2s linear; }
   button span:nth-child(1) {
     top: 0; }
@@ -621,6 +621,10 @@ header .sub-menu li{
 	color: #FFFFFF;
 	padding: 8px 25px;
 }
+.orange-brd-btn-shadow:hover{
+	background-color: #C75527;
+	color: #FFF;
+}
 .object-fit-cover{
 	object-fit: cover;
 	object-position: center;
@@ -673,6 +677,7 @@ header .sub-menu li{
 }
 .col-category > a:hover{
 	box-shadow: 0 8px 25px 0 rgba(0,0,0,0.59);
+	color: #FFF!important;
 }
 .col-category:hover .home-cat-excerpt{
 	margin-bottom: 10%;
@@ -1513,10 +1518,24 @@ textarea{
 @media only screen and (max-width:1440px) {
 	.home-title{
 		margin-top: 400px;
-		margin
 	}
 }
 @media only screen and (max-width:1024px) {
+	#menu-btn{
+		display: block;
+	}
+	.menu-container .large-menu ul{
+		display: none;
+	}
+	.nav-mobile ul li a{
+		color: #4D4D4D;
+	}
+	.responsive .resize-menu .nav-mobile ul li a{
+		color: #FFF;
+	}
+	#menu-btn.open span{
+		color: #4D4D4D!important;
+	}
 	#accueil{
 		background-size: cover;
 		background-attachment: scroll;
@@ -1542,22 +1561,19 @@ textarea{
 		font-size: 100px;
 		line-height: 70px;
 	}
-	.home-about{
-		padding-top: 0px;
-		padding-bottom: 0px;
-		background-position-x: -60px;
+	.home-partner-img{
+		width: 80%;
+		margin: -50px auto 50px auto;
+		display: block;
 	}
-	.home-team{
-		flex-wrap: wrap;
+	.home-blog-slider{
+		margin: 0px;
 	}
-	.home-about-left{
-		width: 100%;
-	}
-	.text-container5-left{
-		width: auto!important;
-		margin-left: auto!important;
-		margin-right: auto!important;
-		padding: 0px 50px;
+	.col-category:last-child{
+		-webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
 	}
 	/* BOUTIQUE */
 	.post-type-archive-product .archive-product-container:before{
@@ -1577,7 +1593,6 @@ textarea{
 	.tax-product_cat .archive-product-container:before{
 		display: none;
 	}
-
 	/* CONTACT */
 	.contact h1{
 		font-size: 42px;
@@ -1585,18 +1600,11 @@ textarea{
 	.contact input, textarea{
 		width: 90%;
 	}
-
 }
 @media only screen and (max-width:767px) {
 	.hidden-xs{display: none;}
 	.responsive #menu-burger-menu{padding-left: 0px;}
 	.no-flex{display: block!important;}
-	.img-blog-slider{height: 250px;}
-	.home-title{margin-left: -210px;}
-	.blog-prev{display: none!important;}
-	.blog-next{display: none!important;}
-	.coaching-row p{padding-left: 13%;}
-	.about-top-right{padding-left: 13%;}
 	#menu-btn{
 		display: inline-block;
 	}
@@ -1608,22 +1616,51 @@ textarea{
 		height: 45px;
 	}
 	/** HOME PAGE **/
-	.home-posts-child a:first-child{
-		display: none;
-	}
-	.social-networks {
-		justify-content: space-around;
-	}
-	.blog-posts-img{
-		height: 200px;
-		float: none!important;
-	}
-	.logo-img {
-		width: 70px;
-		margin-top: 50px;
-	}
-	.menu-section{
+	.resize-menu .menu-section{
 		height: 60px;
+	}
+	.logo svg{
+		float: left;
+	}
+	.menu-container{
+		padding: 5px 15px;
+	}
+	.home main{
+		width: 100%;
+		overflow: hidden;
+	}
+	.home h1{
+		font-size: 52px;
+		line-height: 52px;
+	}
+	.slider-title-content .slider-title{
+		padding-left: 30px;
+	}
+	.slider-title-content .slider-title-excerpt{
+		font-size: 22px;
+	}
+	.intro-category{
+    padding: 0px 20px 80px!important;
+	}
+	.col-category .home-cat-excerpt{
+		margin-bottom: 10%;
+	}
+	.home-news-container{
+		padding: 50px 0px;
+	}
+	.home-news-container h3{
+		padding-left: 30px;
+		text-transform: none!important;
+		font-size: 32px;
+	}
+	.home-blog-slider .slick-list{
+		padding: 0px;
+	}
+	.home-blog-slider .slick-slide{
+		padding: 0px;
+	}
+	.home-news-container .border-x{
+		border: none;
 	}
 	/* MON COMPTE */
 	.woocommerce-account section{
@@ -1656,6 +1693,17 @@ textarea{
 	.woocommerce-cart h1{
 		font-size: 52px;
 		margin-top: 100px;
+	}
+	/* FOOTER */
+	.footer img{
+		display: none;
+	}
+	footer #contact>div{
+		justify-content: center!important;
+    text-align: center;
+	}
+	footer #contact p{
+		margin-bottom: 10px!important;
 	}
 }
 
@@ -1754,9 +1802,15 @@ textarea{
 		padding: 10px;
 	}
 }
-
-
-
+@media only screen and (max-width:320px) {
+	.home h1 {
+    font-size: 42px;
+    line-height: 42px;
+	}
+	.slider-title-content .slider-title {
+    padding-left: 15px;
+	}
+}
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px)

@@ -16,7 +16,7 @@
 							<div class="anim-500 slider-title ">
 								<div class="h-100 d-flex flex-column justify-content-center">
 									<div class="text-white poppins uppercase anim-300"><?php the_sub_field('titre');?></div>
-									<div class="fs-28 text-white anim-500 poppins mb-30"><?php the_sub_field('description');?></div>
+									<div class="fs-28 slider-title-excerpt text-white anim-500 poppins mb-30"><?php the_sub_field('description');?></div>
 									<div>
 										<a href="<?php the_sub_field('lien_bouton');?>" class="orange-btn"><?php the_sub_field('texte_bouton');?></a>
 									</div>
@@ -35,7 +35,7 @@
 								<div class="anim-500 slider-title ">
 									<div class="h-100 d-flex flex-column justify-content-center">
 										<div class="text-white poppins uppercase anim-300"><?php the_sub_field('titre');?></div>
-										<div class="fs-28 text-white anim-500 poppins mb-30"><?php the_sub_field('description');?></div>
+										<div class="fs-28 slider-title-excerpt text-white anim-500 poppins mb-30"><?php the_sub_field('description');?></div>
 										<div>
 											<a href="<?php the_sub_field('lien_bouton');?>" class="orange-btn"><?php the_sub_field('texte_bouton');?></a>
 										</div>
@@ -171,7 +171,7 @@
 		background: -o-linear-gradient(rgba(0,0,0,0.72) 15%, rgba(0,0,0,0.72) 100%);
 		background: linear-gradient(rgba(0,0,0,0.72) 15%, rgba(0,0,0,0.72) 100%),
 		url('<?php the_field('home_blog_bkg') ?>'); background-size: cover; background-position: center;">
-		<div class="container pt-80 pb-80">
+		<div class="container home-news-container pt-80 pb-80">
 			<div class="row mb-50">
 				<h3 class="text-white fs-36 ls-1 uppercase mx-auto">Les dernières <span class="text-orange">actualités</span></h3>
 			</div>
@@ -197,7 +197,7 @@
 					foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 					<div class="col-xl-6 col-lg-6 col-md-12 col-12">
 						<a class="text-white" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-							<h3 class="fw-300 text-white fs-28"><?php the_title(); ;?></h3>
+							<h3 class="fw-300 pl-0 text-white fs-28"><?php the_title(); ;?></h3>
 							<p class="sourcepro fs-18 text-white mt-30 mb-30">
 								<?php the_excerpt(); ?>
 							</p>

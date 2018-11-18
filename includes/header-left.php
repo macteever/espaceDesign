@@ -33,7 +33,7 @@
             <span></span>
             <span></span>
          </button>
-         <span class="text-darkgrey ml-10">MENU</span>
+         <span class="text-white ml-10">MENU</span>
       </div>
    <!-- /nav -->
    </div>

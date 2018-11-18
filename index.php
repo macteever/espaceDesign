@@ -34,6 +34,7 @@
 								</div>
 					    <?php }
 					    ?>
+							<a href="/espacedesign/actualites"><h4 class="fs-18 py-15 fw-700 px-30">Voir tout</h4></a>
 						</div>
 					</div>
 					<div class="col-xl-8 col-lg-8 col-md-12 col-12 mt-150 pb-200 posts-container">
@@ -41,22 +42,21 @@
 						if ( have_posts() ) :
 						while ( have_posts() ) : the_post();
 						?>
-						<div class="col-xl-6 col-lg-6 col-md-12 col-12 posts-billet">
+						<div class="col-xl-6 col-lg-6 col-md-12 col-12 posts-billet pb-80">
 							<a class="d-block posts-link" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-							<div class="posts-content text-white pt-300 pb-30 p-15" style="background: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>'); background-size: cover; background-position: center;">
-									<div class="d-flex flex-column">
-										<h3 class="fs-36 uppercase text-white"><?php the_title(); ?></h3>
-										<p class="text-white mb-30">
-											<?php $category_detail=get_the_category();//$post->ID
-												 foreach($category_detail as $cd){
-												 echo $cd->cat_name;
-												 }
-											?>
-										</p>
-										<div><a class="text-white fs-18 posts-btn ls-1" href="<?php the_permalink(); ?>">Lire l'article</a></div>
-									</div>
-									<div class="blk-filter"></div>
-							</div>
+								<img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>" alt="espace design bordeaux mobilier tableaux créateurs design">
+								<div class="post-related-infos text-left">
+									<h3 class="fs-32 uppercase text-white"><?php the_title(); ?></h3>
+									<p class="text-white mb-30">
+										<?php $category_detail=get_the_category();//$post->ID
+											 foreach($category_detail as $cd){
+											 echo $cd->cat_name;
+											 }
+										?>
+									</p>
+									<div><a class="text-white fs-16 posts-btn ls-1" href="<?php the_permalink(); ?>">Lire l'article</a></div>
+								</div>
+								<div class="single-post-filter"><a href="<?php the_permalink(); ?>"></a></div>
 							</a>
 						</div>
 						<?php

@@ -53,6 +53,9 @@
 		</section>
 		<section>
 			<div class="container">
+				<div class="row justify-content-center intro-category-before">
+					<img src="<?=get_template_directory_uri().'/assets/img/arrow-home.svg'?>" alt="espace design bordeaux créations mobiliers tableaux sculptures">
+				</div>
 				<div class="row flex-column pt-80 pb-80 justify-content-center align-items-center text-center intro-category p-relative">
 					<?php
 					if( have_rows('intro_category') ):
@@ -193,12 +196,12 @@
 					$myposts = get_posts( $args );
 					foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 					<div class="col-xl-6 col-lg-6 col-md-12 col-12">
-						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+						<a class="text-white" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 							<h3 class="fw-300 text-white fs-28"><?php the_title(); ;?></h3>
 							<p class="sourcepro fs-18 text-white mt-30 mb-30">
 								<?php the_excerpt(); ?>
 							</p>
-							<div class="p-10">
+							<div class="p-10 pl-0">
 								<a class="orange-btn" href="<?php the_permalink(); ?>">Lire l'actu</a>
 							</div>
 						</a>

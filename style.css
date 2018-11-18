@@ -640,7 +640,7 @@ header .sub-menu li{
 	top: 0px;
 }
 .page-template-template-home .main-slider .slick-track{
-	height: calc(100vh - 15px);
+	height: 100vh;
 }
 .slider-title-content h1{
 	font-size: 62px;
@@ -661,11 +661,12 @@ header .sub-menu li{
 	background-color: #FFFFFF;
 }
 /* PARTIE CATEGORY */
-.intro-category::before{
-	content: url(assets/img/arrow-home.svg);
-	display: block;
-	position: absolute;
-	top: -50px;
+.intro-category-before{
+	position: relative;
+	margin-top: -105px;
+}
+.intro-category-before img{
+	width: 50px;
 }
 .col-category{
 	cursor: pointer;
@@ -743,6 +744,11 @@ header .sub-menu li{
 }
 .mag-slide{
 	margin: 0px 2px;
+
+}
+.fancybox-active .mag-slide{
+	margin: 0px;
+	width: calc(100% - 4px)!important;
 }
 .mag-slide img{
 	height: 100%;
@@ -1353,29 +1359,48 @@ textarea{
 	border-radius: 100px;
 	background-color: rgba(0, 0, 0, 0.52);
 }
+.posts-btn:hover{
+	padding: 5px 25px;
+	border: 1px solid #C75527;
+	border-radius: 100px;
+	background-color: #C75527;
+}
 .index-category ul{
 	padding-left: 0px;
 	list-style-type: none;
 }
 .posts-container .posts-billet:nth-child(odd){
-	margin-top: 80px;
+	transform: translateY(80px);
 }
-.posts-billets{
+.posts-billet{
 	position: relative;
+	height: fit-content;
+	-webkit-height: fit-content;
+	-moz-height: fit-content;
+	-ms-height: fit-content;
+	-o-height: fit-content;
 }
-.posts-billets .posts-link{
-	position: absolute;
+.posts-billet img{
+	height: 450px;
 	width: 100%;
-	height: 100%;
+	object-fit: cover;
 }
-.blk-filter{
-	/* background: rgba(0,0,0,0.33);
-	width: calc(100% - 30px);
-	height: 100%;
+.posts-billet .post-related-infos{
 	position: absolute;
-	top: 0px;
-	left: 15px; */
+  bottom: 105px;
+  left: 40px;
+  z-index: 999;
 }
+.posts-billet .single-post-filter{
+  height: calc(100% - 80px);
+  width: calc(100% - 30px);
+	position: absolute;
+	left: 15px;
+}
+/* .posts-billet .posts-link-infos:nth-child(even){
+	bottom: 105px;
+} */
+
 /***********SINGLE POST *************/
 .post-content{
 	border-right: solid 1px #EAEAEA;

@@ -55,10 +55,11 @@
 																 }
 															?>
 														</p>
-														<div><a class="text-white fs-18 posts-btn ls-1" href="<?php the_permalink(); ?>">Lire l'article</a></div>
+														<div><a class="text-white fs-16 posts-btn ls-1" href="<?php the_permalink(); ?>">Lire l'article</a></div>
 													</div>
 													<div class="single-post-filter"><a href="<?php the_permalink(); ?>"></a></div>
 												</a>
+
 											</li>
 										<?php endwhile; ?>
 										<!-- end of the loop -->

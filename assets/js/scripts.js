@@ -77,7 +77,7 @@
           });
 
 					// SUB MENU header
-					$('#menu-item-147').click(function() {
+					$('#menu-item-147').hover(function() {
 						$('.sub-menu').toggleClass('translate-submenu');
 						$('.submenu-chevron').toggleClass('submenu-chevron-rotate');
 						$('.menu-container').toggleClass('header-menu-bkg');

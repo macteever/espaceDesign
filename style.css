@@ -1575,23 +1575,27 @@ textarea{
     flex: 0 0 100%;
     max-width: 100%;
 	}
-	/* BOUTIQUE */
-	.post-type-archive-product .archive-product-container:before{
-		display: none!important;
+	/* ARCHIVE PRODUIT */
+	.tax-product_cat .archive-filter, .post-type-archive-product .archive-filter{
+		margin-bottom: 50px;
 	}
-	.archive-product-container h1{
-		font-size: 58px;
-		margin-bottom: 0px!important;
+	.tax-product_cat .forward-product, .post-type-archive-product .forward-product{
+		padding-left: 0px;
 	}
-	.archive-product-container nav{
-		margin-top: 30px;
+	.archive-global-title h1{
+		font-size: 52px!important;
+		line-height: 52px!important;
+		margin-top: 0px!important;
 	}
-	.post-type-archive-product .wrapper:before{
-		height: 280px;
-		background-size: cover;
+	.archive-global-excerpt{
+		font-size: 18px;
 	}
-	.tax-product_cat .archive-product-container:before{
-		display: none;
+	.archive-global-title h1 span{
+		text-transform: none!important;
+		font-size: 42px;
+	}
+	.archive-product-contenu li{
+		width: 100%!important;
 	}
 	/* CONTACT */
 	.contact h1{

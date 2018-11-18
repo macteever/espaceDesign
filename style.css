@@ -1531,16 +1531,16 @@ textarea{
 		display: block;
 	}
 	/* MAGASIN */
-	.page-template-template-magasin #menu-btn button span, .page-template-template-partner #menu-btn button span, .page-template-template-contact #menu-btn button span{
+	.page-template-template-magasin #menu-btn button span, .page-template-template-partner #menu-btn button span, .page-template-template-contact #menu-btn button span, .single-product #menu-btn button span{
 		background-color: #4D4D4D;
 	}
-	.page-template-template-magasin #menu-btn span, .page-template-template-partner #menu-btn span, .page-template-template-contact #menu-btn span{
+	.page-template-template-magasin #menu-btn span, .page-template-template-partner #menu-btn span, .page-template-template-contact #menu-btn span, .single-product #menu-btn span{
 		color: #4D4D4D!important;
 	}
-	.page-template-template-magasin .resize-menu #menu-btn button span, .page-template-template-partner .resize-menu #menu-btn button span, .page-template-template-contact .resize-menu #menu-btn button span{
+	.page-template-template-magasin .resize-menu #menu-btn button span, .page-template-template-partner .resize-menu #menu-btn button span, .page-template-template-contact .resize-menu #menu-btn button span, .single-product .resize-menu #menu-btn button span{
 		background-color: #FFF;
 	}
-	.page-template-template-magasin .resize-menu #menu-btn span, .page-template-template-partner .resize-menu #menu-btn span, .page-template-template-contact .resize-menu #menu-btn span{
+	.page-template-template-magasin .resize-menu #menu-btn span, .page-template-template-partner .resize-menu #menu-btn span, .page-template-template-contact .resize-menu #menu-btn span, .single-product .resize-menu #menu-btn span{
 		color: #FFF!important;
 	}
 	.menu-container .large-menu ul{
@@ -1558,6 +1558,34 @@ textarea{
 	#accueil{
 		background-size: cover;
 		background-attachment: scroll;
+	}
+	/** SINGLE PRODUCT **/
+	.single-product aside{
+		max-width: 45%;
+	}
+	.single-product .summary.entry-summary {
+    max-width: 55%;
+    margin-left: 5%;
+    width: 50%!important;
+	}
+	.single-product .archive-product-contenu{
+		-webkit-box-flex: 0!important;
+		-ms-flex: 0 0 100%!important;
+		flex: 0 0 100%!important;
+		max-width: 100%!important;
+	}
+	.single-product .related.products img {
+    height: 300px!important;
+    object-fit: cover;
+	}
+	.single-product .summary-child form>div{
+		flex-wrap: wrap!important;
+	}
+	.single-product .summary-child form button{
+		margin-bottom: 10px;
+	}
+	.single-product .summary-child form span{
+		margin-left: 0px;
 	}
 }
 @media only screen and (max-width:992px) {
@@ -1615,6 +1643,32 @@ textarea{
 	}
 	.archive-product-contenu li{
 		width: 100%!important;
+	}
+	/* SINGLE PRODUCT */
+	.single-product-content{
+		flex-wrap: wrap!important;
+		height: auto!important;
+	}
+	.single-product-content aside{
+		width: 100%!important;
+		max-width: 100%!important;
+	}
+	.single-product-content .summary, .single-product .summary.entry-summary{
+		width: 100%!important;
+		max-width: 100%!important;
+		padding-top: 80px!important;
+	}
+	.single-product .slick-slide img{
+		height: 400px;
+	}
+	.single-product .slider-thumb-product{
+		height: auto!important;
+	}
+	.single-product .slider-thumb-nav{
+		margin-top: -50px;
+	}
+	.single-product .summary-child{
+		max-width: 100%;
 	}
 	/* LE MAGASIN */
 	.page-template-template-magasin .featured-infos{

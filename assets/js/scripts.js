@@ -1,6 +1,14 @@
 (function ($, root, undefined) {
 
 		$(document).ready(function(){
+			// APPRARITION
+			var delay = 0;
+			 $('.apparition').each(function() {
+			   var $li = $(this);
+			   setTimeout(function() {
+				 $li.addClass('animation-fade-up');
+			 }, delay+=200); // delay 100 ms
+			 });
 
     // RESIZE HEADER SCROLLTOP
 
@@ -77,7 +85,7 @@
           });
 
 					// SUB MENU header
-					$('#menu-item-147').hover(function() {
+					$('#menu-item-147').click(function() {
 						$('.sub-menu').toggleClass('translate-submenu');
 						$('.submenu-chevron').toggleClass('submenu-chevron-rotate');
 						$('.menu-container').toggleClass('header-menu-bkg');
@@ -339,8 +347,6 @@
 			    }
 					]
 				});
-
-
 
 		});
 })(jQuery, this);

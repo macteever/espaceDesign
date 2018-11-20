@@ -13,7 +13,7 @@
 					<img class="parallax-layer object-fit-cover w-100 h-100" src="<?php the_sub_field('image');?>" alt="Espace design bordeaux mobiliers sculptures et tableaux design"/>
 					<div class="anim-500 slider-title-content d-flex align-items-center">
 						<div class="anim-500 container d-flex flex-column">
-							<div class="anim-500 slider-title ">
+							<div class="anim-500 slider-title apparition">
 								<div class="h-100 d-flex flex-column justify-content-center">
 									<div class="text-white poppins uppercase anim-300"><?php the_sub_field('titre');?></div>
 									<div class="fs-28 slider-title-excerpt text-white anim-500 poppins mb-30"><?php the_sub_field('description');?></div>
@@ -32,7 +32,7 @@
 						</video>
 						<div class="anim-500 slider-title-content d-flex align-items-center">
 							<div class="anim-500 container d-flex flex-column">
-								<div class="anim-500 slider-title ">
+								<div class="anim-500 slider-title apparition">
 									<div class="h-100 d-flex flex-column justify-content-center">
 										<div class="text-white poppins uppercase anim-300"><?php the_sub_field('titre');?></div>
 										<div class="fs-28 slider-title-excerpt text-white anim-500 poppins mb-30"><?php the_sub_field('description');?></div>
